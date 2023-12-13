@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# About Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+    - This is a front end mentor project that displays details about all the countries in the world.
+    - It has a color theme switcher functionality that would allow you to switch between two themes: Light or Dark.
+    - It also has a search functionality where you can search for a certain country.
+    - It has a filter functionality that would allow the user to filter out the countries depending on what region they belong to.
 
-## Available Scripts
+## Theme Switcher Functionality
 
-In the project directory, you can run:
+    - If you clicked the dark mode/light mode button, the color will change to a light or dark color depending on what boolean value the darkMode state is on. I used inline color and background color styling in addition to conditional styling to achieve this. I thought about using classNames but decided that I don't want the added confusion in my css code.
 
-### `npm start`
+## Search Mode Functionality
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    - I implemented this by adding an onChange method in the input.
+    - When the user types in anything in the input, it will filter the data array using the e.target.value. I made sure to turn the input and the country names into lowercase first, then I made a substring of the country names using the slice method and used that to compare to the e.target.value. After that, the new array we get will be set to the countries array and that is what's going to be rendered on the screen.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Filter Functionality
 
-### `npm test`
+    - The filter functionality works similarly to the search functionality except the filter functionality is filtering by region the country belongs in.
+    - The dropdown menu is a div element that contains different buttons with names of different regions in the world inside them.
+    - When the "Filter by Region" button is clicked, the state showDropdown would be set to true and the dropdown will be shown.
+    - When one of the options is clicked, the data array will be filtered using the region and then the countries state is changed using the setCountries method. After that, we set the showDropdown state to false to hide the dropdown.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Countries Buttons
 
-### `npm run build`
+    - I just mapped over the countries array to render the 250 objects in the data array into buttons with the image of the country's flag, the country's name, position, and capital inside it.
+    - When you click on one of those buttons, the showModal state would be set to true and the currentCountry state would be set to the country button that was clicked.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Modal
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    - The modal would show up when the showModal state is set to true. It would disappear when you click close, which would set the showModal state to false.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Additional stuff
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    - If you want to try out this project, visit it in the [Challenge Hub of Front End Mentor.](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca/hub)
