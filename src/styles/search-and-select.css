@@ -1,0 +1,76 @@
+.search-and-select {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 3.47vw;
+  margin-top: 4.23vh;
+}
+
+.search-and-select__search {
+  padding: 1.25rem 0.9375rem;
+  width: 27.78vw;
+  border-radius: 0.625rem;
+  border: none;
+  color: inherit;
+  background-color: inherit;
+  font-size: clamp(1rem, calc(8px + 0.56vw), 2rem);
+}
+
+.search-and-select__search::placeholder {
+  color: inherit;
+}
+
+.search-and-select__select__button {
+  font-size: clamp(1rem, calc(8px + 0.56vw), 2rem);
+  border-radius: 0.625rem;
+  border: none;
+  padding: 1.25rem 1.5625rem;
+  cursor: pointer;
+  width: max-content;
+}
+
+.search-and-select__select__options {
+  position: absolute;
+  width: 10.1279375rem;
+  margin-top: 0.625rem;
+  border-radius: 0.625rem;
+}
+
+.search-and-select__select__options__button {
+  width: 100%;
+  padding-block: 0.9375rem;
+  color: inherit;
+  background-color: inherit;
+  border: none;
+  text-align: start;
+  padding-left: 1.25rem;
+  font-size: clamp(1rem, calc(8px + 0.56vw), 2rem);
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 2000px) {
+  .search-and-select__select__options__button {
+    width: 12.8994375rem;
+  }
+}
+
+@media screen and (max-width: 653px) {
+  .search-and-select {
+    display: block;
+    padding-inline: 0.9375rem;
+  }
+
+  .search-and-select__search {
+    width: 100%;
+    margin-bottom: 0.9375rem;
+  }
+
+  .search-and-select__select__button {
+    width: 13.25rem;
+    padding-left: 0.3125rem;
+  }
+
+  .search-and-select__select__options {
+    width: 13.25rem;
+  }
+}

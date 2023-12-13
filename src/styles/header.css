@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 2.54vh;
+  padding-inline: 3.47vw;
+}
+
+.header__title {
+  font-size: clamp(1rem, calc(16px + 1.11vw), 5rem);
+}
+
+.header__button {
+  background-color: inherit;
+  color: inherit;
+  border-radius: 0.625rem;
+  border: none;
+  cursor: pointer;
+  font-size: clamp(0.75rem, calc(9px + 0.625vw), 2.5rem);
+}
+
+@media screen and (max-width: 430px) {
+  .header {
+    padding-inline: 5.33vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header {
+    padding-inline: 5.36vw;
+  }
+}
