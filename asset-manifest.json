@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Rest-Countries-API-with-Color-Switcher/static/css/main.f032522e.css",
+    "main.js": "/Rest-Countries-API-with-Color-Switcher/static/js/main.5340708f.js",
+    "index.html": "/Rest-Countries-API-with-Color-Switcher/index.html",
+    "main.f032522e.css.map": "/Rest-Countries-API-with-Color-Switcher/static/css/main.f032522e.css.map",
+    "main.5340708f.js.map": "/Rest-Countries-API-with-Color-Switcher/static/js/main.5340708f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f032522e.css",
+    "static/js/main.5340708f.js"
+  ]
+}
